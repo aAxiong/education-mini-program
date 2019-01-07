@@ -1,0 +1,124 @@
+page {
+  background: #fff;
+}
+
+.title {
+  margin-top: 40rpx;
+  font-size: 48rpx;
+  color: #4a4a4a;
+  letter-spacing: 0.23px;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+
+.changeSex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.changeSex .btn {
+  width: 289rpx;
+  height: 120rpx;
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #9c9c9c;
+  font-size: 34rpx;
+}
+
+.changeSex .btn image {
+  width: 100rpx;
+  height: 104rpx;
+}
+
+.changeSex .btn.boybtn {
+  border-top-left-radius: 100rpx;
+  border-bottom-left-radius: 100rpx;
+}
+
+.changeSex .btn.boybtn image {
+  margin-left: 50rpx;
+}
+
+.changeSex .btn.girlbtn image {
+  margin-right: 50rpx;
+}
+
+.changeSex .btn.boybtn text {
+  margin-right: 30rpx;
+}
+
+.changeSex .btn.girlbtn text {
+  margin-left: 30rpx;
+}
+
+.changeSex .btn.girlbtn {
+  border-top-right-radius: 100rpx;
+  border-bottom-right-radius: 100rpx;
+}
+
+.changeSex .btn.boybtn.active {
+  background: #4c87ff;
+  color: #fff;
+}
+
+.changeSex .btn.girlbtn.active {
+  background: #ff8e9a;
+  color: #fff;
+}
+
+.inputbox {
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+
+.inputbox .inputli {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 100px;
+  width: 686rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-bottom: 60rpx;
+}
+
+.inputbox .inputli image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 46rpx;
+}
+
+.inputbox .inputli input {
+  width: 408rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+  font-size: 34rpx;
+}
+
+.phcolor {
+  color: #ccc;
+}
+
+.btnbox {
+  margin: 0 auto;
+  margin-top: 40rpx;
+  width: 686rpx;
+}
+
+.btnbox .btn {
+  background: #e2ecff;
+  font-size: 36rpx;
+  color: #4c87ff;
+  letter-spacing: 0.58px;
+  text-align: center;
+  line-height: 94rpx;
+  border-radius: 4px;
+}
+
+.btnbox .btn.active {
+  background: #4c87ff;
+  color: #fff;
+}

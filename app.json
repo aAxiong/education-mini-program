@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/order-details/order-details",
+    "pages/payfor_success/payfor_success",
+    "pages/shopCar-list/shopCar-list",
+    "pages/confirm_order/confirm_order",
+    "pages/project_join/project_join",
+    "pages/sign_up/sign_up",
+    "pages/comment/comment",
+    "pages/comment-success/comment-success",
+    "pages/curriculum-list/curriculum-list",
+    "pages/curriculum-info/curriculum-info",
+    "pages/mine/mine",
+    "pages/curriculum/curriculum",
+    "pages/edit-address/edit-address",
+    "pages/logistics/logistics",
+    "pages/address/address",
+    "pages/verification/verification",
+    "pages/homeSubject/homeSubject",
+    "pages/onlineAnswer/onlineAnswer",
+    "pages/finshHomeTask/finshHomeTask",
+    "pages/finshOnlineTask/finshOnlineTask",
+      "pages/pic_details/pic_details"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "艾克斯科学实验室",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7F8389",
+    "selectedColor": "#75c1fe",
+    "navigationStyle": "custom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tarbar/index_home_icon.png",
+        "selectedIconPath": "images/tarbar/index_homeactive_icon.png"
+      },
+      {
+        "pagePath": "pages/curriculum/curriculum",
+        "text": "课程",
+        "iconPath": "images/tarbar/index_bill_icon.png",
+        "selectedIconPath": "images/tarbar/index_billactive_icon.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tarbar/index_Intelligence_icon.png",
+        "selectedIconPath": "images/tarbar/index_Intelligenceactive_icon.png"
+      }
+    ]
+  }
+}

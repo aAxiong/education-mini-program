@@ -1,0 +1,65 @@
+<view class='sign_up_top'>
+  <image src='/images/sign_up_bg.png' class='sign_up_bg'></image>
+  <view class='sign_up_top_middle'>
+    <view class='logo'>
+      <image src='/images/logo_icon2.png'></image>
+    </view>
+    <view class='text'>
+      美国原版科学教育课堂
+    </view>
+    <view class='join_bg'>
+      <image src='/images/join_bg.png'></image>
+      <view class='title'>x-lab科学实验室</view>
+      <view class='title_text'>像科学家一样思考 像工程师一样解决问题</view>
+    </view>
+    <view class='bottomText clearfix'>
+      <view class='fl'>艾科思科学教育少儿科学教育空白市场</view>
+      <view class='pink fl'>火热</view>
+      <view class='fl'>招商中</view>
+    </view>
+  </view>
+</view>
+
+<view class='sign_up_form'>
+  <view class='title'>资料填写</view>
+
+  <view class="changeSex">
+    <view class="btn boybtn {{sex==0?'active':''}}" data-index='0' bindtap='changeSex'>
+      <image src='/images/boyicon.png'></image>
+      <text>男生</text>
+    </view>
+    <view class="btn girlbtn {{sex==1?'active':''}}" data-index='1' bindtap='changeSex'>
+      <text>女生</text>
+      <image src='/images/girlicon.png'></image>
+    </view>
+  </view>
+  <view class="inputbox">
+    <view class="inputli">
+      <image src="/images/student.png"></image>
+      <input type='text' placeholder='输入您的姓名' placeholder-class="phcolor" bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{name}}' data-val="name" confirm-type="done"></input>
+    </view>
+    <view class="inputli">
+      <image src="/images/phone.png"></image>
+      <input type="number" placeholder='输入您的电话' placeholder-class="phcolor" placeholder-class="phcolor" bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{tel}}' data-val="tel" confirm-type="done"></input>
+    </view>
+    <view class="inputli">
+      <image src="/images/address_icon2.png"></image>
+      <picker class='flex_item input' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{region[0]}},{{region[1]}},{{region[2]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>
+<view class='fixedbtn clearfix'>
+  <view class='fl' bindtap='payphone'>
+    联系我们
+  </view>
+  <view class='fr' bindtap='save'>
+    我要加盟
+  </view>
+</view>
+<showToast id="kmShowToast"></showToast>
+<loading updateMsgFlag="{{!loadingFlag}}" wx:if="{{loadingFlag}}" loadngMsg="{{loadngMsg}}">
+</loading>

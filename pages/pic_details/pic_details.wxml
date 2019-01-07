@@ -1,0 +1,13 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='tit'>{{title}}</view>
+<view class='infoTime'>
+  <text class='name'>艾克斯科学实验室</text>
+  <text class='split'>|</text>
+  <text class='time'>{{time}}</text>
+</view>
+
+<view class='pa8'>
+
+<rich-text nodes="{{nodes}}"></rich-text>
+  <!-- <template is="wxParse" data="{{wxParseData:article.nodes}}" /> -->
+</view>

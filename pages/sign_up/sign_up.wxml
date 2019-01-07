@@ -1,0 +1,87 @@
+<view class='sign_up_top'>
+  <image src='/images/sign_up_bg.png' class='sign_up_bg'></image>
+  <view class='sign_up_top_middle'>
+    <view class='logo'>
+      <image src='/images/logo_icon.png'></image>
+    </view>
+    <view class='text'>
+      X-LAB(艾克斯科学实验室)是专注于青少儿K12与STEAAM 教育的领导品牌，长年活跃于创新教育行业，坚持“learning by doing”的教育理念，为全球教育完成“知识传递”到“学以致用”的蜕变而努力。
+    </view>
+  </view>
+</view>
+<view class='sign_up_middle'>
+  <view class='flex item'>
+    <view class='icon'>
+      <image src='/images/sign_up_icon1.png'></image>
+    </view>
+    <view class='flex_item'>
+      <view class='name'>课程合作</view>
+      <view class='name_info'>学习、社区、企业、机构课程包</view>
+    </view>
+  </view>
+  <view class='flex item'>
+    <view class='icon'>
+      <image src='/images/sign_up_icon2.png'></image>
+    </view>
+    <view class='flex_item'>
+      <view class='name'>活动合作</view>
+      <view class='name_info'>科普月、科技节、夏令营、城市穿越</view>
+    </view>
+  </view>
+  <view class='flex item'>
+    <view class='icon'>
+      <image src='/images/sign_up_icon3.png'></image>
+    </view>
+    <view class='flex_item'>
+      <view class='name'>活动合作</view>
+      <view class='name_info'>幼儿园初高阶－科学实验室套盒全国代购</view>
+    </view>
+  </view>
+</view>
+<view class='sign_up_form'>
+  <view class='title'>资料填写</view>
+
+  <view class="changeSex">
+    <view class="btn boybtn {{sex==0?'active':''}}" data-index='0' bindtap='changeSex'>
+      <image src='/images/boyicon.png'></image>
+      <text>男生</text>
+    </view>
+    <view class="btn girlbtn {{sex==1?'active':''}}" data-index='1' bindtap='changeSex'>
+      <text>女生</text>
+      <image src='/images/girlicon.png'></image>
+    </view>
+  </view>
+  <view class="inputbox">
+    <view class="inputli">
+      <image src="/images/student.png"></image>
+      <input type='text' placeholder='输入学生姓名' placeholder-class="phcolor" bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{name}}' data-val="name" confirm-type="done"></input>
+    </view>
+    <view class="inputli">
+      <image src="/images/phone.png"></image>
+      <input type="number" placeholder='输入家长电话' placeholder-class="phcolor" bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{tel}}' data-val="tel" confirm-type="done"></input>
+    </view>
+    <view class="inputli">
+      <image src="/images/age_icon.png"></image>
+      <input type='text' placeholder='学生年龄' placeholder-class="phcolor" bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{age}}' data-val="age" confirm-type="done"></input>
+    </view>
+    <view class="inputli">
+      <image src="/images/address_icon2.png"></image>
+      <picker class='flex_item input' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          {{region[0]}},{{region[1]}},{{region[2]}}
+        </view>
+      </picker>
+      <!-- <input type='text' placeholder='请输入省市区' placeholder-class="phcolor" placeholder-class="phcolor" bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{remark}}' data-val="remark" confirm-type="done"></input> -->
+    </view>
+    <view class="inputli">
+      <input type='text' style='margin-left: 46rpx' placeholder='输入街道门牌信息' placeholder-class="phcolor" placeholder-class="phcolor" bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{address}}' data-val="address" confirm-type="done"></input>
+    </view>
+  </view>
+</view>
+
+
+<view class='fixedbtn' bindtap='save'>在线报名</view>
+<showToast id="kmShowToast"></showToast>
+
+<loading updateMsgFlag="{{!loadingFlag}}" wx:if="{{loadingFlag}}" loadngMsg="{{loadngMsg}}">
+</loading>

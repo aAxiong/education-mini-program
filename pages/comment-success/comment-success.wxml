@@ -1,0 +1,11 @@
+<view class='icon'>
+  <image src='/images/success_icon.png'></image>
+</view>
+<view class='title'>感谢您的评论!</view>
+<view class='text'>内容详情可折行，建议不超过两行</view>
+
+<view class='controlbtn clearfix'>
+  <navigator class='btn fl' open-type="switchTab" url="/pages/index/index">返回首页</navigator>
+  <!-- <view class='btn fl'>查看评价</view> -->
+  <!-- <navigator class='btn fr' open-type="navigateBack" delta="1">查看评价</navigator> -->
+</view>

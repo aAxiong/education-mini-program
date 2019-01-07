@@ -1,0 +1,23 @@
+<view class='footer_nav flex'>
+  <view class='flex_item' bindtap='_goPage' data-topage='index'>
+    <view class='allAutoWidth'>
+      <image wx:if="{{active === 'index'}}" class='house' src='/images/tarbar/index_homeactive_icon.png' />
+      <image wx:else class='house' src='/images/tarbar/index_home_icon.png' />
+    </view>
+    <view class='title {{active === "index" ? "active" : ""}}'>首页</view>
+  </view>
+  <view class='flex_item' bindtap='_goPage' data-topage='curriculum'>
+    <view class='allAutoWidth'>
+      <image wx:if="{{active === 'curriculum'}}" class='house' src='/images/tarbar/index_billactive_icon.png' />
+      <image wx:else class='house' src='/images/tarbar/index_bill_icon.png' />
+    </view>
+    <view class='title  {{active == "curriculum" ? "active" : ""}}'>课程</view>
+  </view>
+  <view class='flex_item' bindtap='_goPage' data-topage='mine'>
+    <view class='allAutoWidth'>
+      <image wx:if="{{active === 'mine'}}" class='house' src='/images/tarbar/index_Intelligenceactive_icon.png' />
+      <image wx:else class='house' src='/images/tarbar/index_Intelligence_icon.png' />
+    </view>
+    <view class='title {{active == "mine" ? "active" : ""}}'>我的</view>
+  </view>
+</view>

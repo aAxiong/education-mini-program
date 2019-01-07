@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的地址",
+  "usingComponents": {
+    "loading": "/project.config.jsoncomponents/loading/loading"
+  }
+}

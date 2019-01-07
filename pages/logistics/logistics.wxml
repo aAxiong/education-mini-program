@@ -1,0 +1,63 @@
+<view class='top flex'>
+  <view class='pic'>
+    <image src='{{pirUrl}}'/>
+    <view class='bottomText'>共{{Allcount}}件商品</view>
+  </view>
+  <view class='flex_item'>
+    <view class='flex_item_top clearfix'>
+      <text class='fl'>物流状态：</text>
+      <text class='fl status' wx:if="{{status === 'signin'}}">已签收</text>
+      <text class='fl status' wx:elif="{{status === 'transit'}}">运输中</text>
+      <text class='fl status' wx:elif="{{status === 'sendGoods'}}">已发货</text>
+    </view>
+    <view class='name'>配送商：{{company}}</view>
+    <view class='num'>运单编号：{{no}}</view>
+  </view>
+</view>
+
+<view class='wrapper'>
+  <view class='list clearfix' wx:for="{{InfoList}}">
+    <view class='fl time'>
+      <view class='time-date'>{{item.date}}</view>
+      <view class='time-times'>{{item.times}}</view>
+    </view>
+    <view class='fl icon'>
+      <block wx:if="{{item.status === 'transit'}}">
+        <block wx:if="{{index === 0}}">
+          <image src='/images/get_goods_icon.png' />
+        </block>
+        <block wx:else>
+          <view class='cir'></view>
+        </block>
+      </block>
+      <block wx:elif="{{item.status === 'signin'}}">
+        <image src='/images/recv_icon2active.png' />
+      </block>
+      <block wx:elif="{{item.status === 'sendGoods'}}">
+        <image src='/images/send_goods_icocn.png' />
+      </block>
+      <block wx:else>
+        <view class='cir'></view>
+      </block>
+    </view>
+    <view class='fl right-line'>
+      <!-- <view class='status'>
+        <block wx:if="{{item.status === 'transit'}}">
+          运输中
+        </block>
+        <block wx:elif="{{item.status === 'signin'}}">
+          已签收
+        </block>
+        <block wx:elif="{{item.status === 'sendGoods'}}">
+          已发货
+        </block>
+        <block wx:else>
+          {{item.area}}
+        </block>
+      </view> -->
+      <view class='title'>
+        {{item.remark}}
+      </view>
+    </view>
+  </view>
+</view>

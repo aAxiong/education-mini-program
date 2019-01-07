@@ -1,0 +1,63 @@
+<view class="wrapper">
+  <view class='flex top'>
+    <view class='recvName'>收货人</view>
+    <view class='flex_item'>
+      <input type='text' class='input' value='{{addressItem.name}}' bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" confirm-type="done" placeholder='请输入收货人姓名' data-val="addressItem.name" placeholder-class='_pla' />
+    </view>
+  </view>
+
+  <view class='flex list sexlist'>
+    <view bindtap='changeSex' data-ind="1">
+      <image src="{{addressItem.sex === 1 ? '/images/get_iconactive.png' : '/images/get_icon.png'}}" />先生
+    </view>
+    <view class='marginLeft' bindtap='changeSex' data-ind="0">
+      <image src="{{addressItem.sex === 0 ? '/images/get_iconactive.png' : '/images/get_icon.png'}}" />女士</view>
+  </view>
+
+  <view class='flex list'>
+    <view class='title'>联系电话</view>
+    <view class='flex_item'>
+      <input type='number' class='input' value='{{addressItem.mobile}}' bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" confirm-type="done" maxlength='11' placeholder='请输入收货人联系电话' data-val="addressItem.mobile" placeholder-class='_pla' />
+    </view>
+  </view>
+
+  <view class='flex list area'>
+    <view class='title'>区域选择</view>
+    <picker class='input flex_item' mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        {{region[0]}},{{region[1]}},{{region[2]}}
+      </view>
+    </picker>
+    <image src='/images/right_icon.png'></image>
+  </view>
+
+  <view class='flex list'>
+    <view class='title'>详细地址</view>
+    <view class='flex_item'>
+      <textarea class='textarea flex' placeholder="街道门牌信息" placeholder-class='_pla' bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{addressItem.address}}' data-val="addressItem.address" confirm-type="done"></textarea>
+    </view>
+  </view>
+
+  <view class='flex list'>
+    <view class='title'>设为默认地址</view>
+    <view class='flex_item'>
+      <view class='progress {{setAuto ? "progress_active" :""}}' bindtap='setAutoHandle'>
+        <view class='progress_btn {{setAuto ? "progress_btn_active" :""}}'></view>
+      </view>
+    </view>
+  </view>
+
+
+</view>
+<view class='btn clearfix' wx:if="{{addressItem.id !== ''}}">
+  <view class='delete fl' bindtap='deleteUserHandler'>删除</view>
+  <view class='save fr' bindtap='save'>保存</view>
+</view>
+
+<view class='btn clearfix' wx:if="{{addressItem.id === ''}}">
+  <view class='save fr' bindtap='save' style='width: 100%'>保存</view>
+</view>
+
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"></loading>
+<showToast id="kmShowToast"></showToast>
+<comfirm id="kmcomfirm" bind:surelFn="surelFn" bind:cancelFn="cancelFn"></comfirm>

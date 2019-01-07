@@ -1,0 +1,322 @@
+page {
+  background: #fff;
+}
+
+.banner {
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+}
+
+.banner >image {
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+}
+
+.banner .bannerbox {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  margin-top: 70rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner .companyInfo {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+}
+
+.banner .companyInfo .renzheng {
+  width: 148rpx;
+  height: 40rpx;
+  background: #4c87ff;
+  font-size: 24rpx;
+  border-radius: 6rpx;
+  margin-top: 20rpx;
+  line-height: 34rpx;
+}
+
+.banner .companyInfo .renzheng image {
+  width: 21rpx;
+  height: 24rpx;
+  margin-left: 12rpx;
+  margin-right: 10rpx;
+  vertical-align: sub;
+}
+
+.banner .companyInfo .renzheng text {
+  vertical-align: middle;
+}
+
+.banner .companyInfo .info {
+  color: #fff;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+
+.banner .bannerbox .logo image {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.banner .top {
+  margin-right: 40rpx;
+}
+
+.banner .top .cartNum {
+  background: #ff3b30;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 32rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  display: block;
+  position: absolute;
+  right: -8rpx;
+  top: -6rpx;
+}
+
+.banner .top  button {
+  width: 62rpx;
+  height: 62rpx;
+  position: relative;
+  padding: 0;
+  opacity: 0;
+  z-index: 3;
+}
+
+.banner .top  button::after {
+  border: none;
+}
+
+.banner .top image {
+  width: 62rpx;
+  height: 62rpx;
+}
+
+.share {
+  position: relative;
+  margin-left: 30rpx;
+}
+
+.share image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 30rpx;
+}
+
+.list .li {
+  width: 336rpx;
+  margin-top: 30rpx;
+}
+
+.list .li  .imagebox {
+  width: 336rpx;
+  height: 336rpx;
+}
+
+.list .li  .imagebox image {
+  width: 100%;
+  height: 100%;
+}
+
+.list .li .text {
+  width: 336rpx;
+  height: 84rpx;
+  margin-top: 16rpx;
+  color: #333;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: box;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.list .li .toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list .li .toolbar text {
+  color: #ff3b30;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.list .li .toolbar .buy image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 14rpx;
+}
+
+/*购物车*/
+
+.shopCart {
+  position: relative;
+}
+
+.shopcar .mask {
+  opacity: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+}
+
+.shopcar {
+  display: fixed;
+  bottom: 0;
+}
+
+.shopcar .mask.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.shopcar .shopWindow {
+  position: fixed;
+  bottom: -440rpx;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  padding-bottom: 30rpx;
+  background: #fff;
+  height: 423rpx;
+  transform: translate(0px, -233.496px);
+  transition: transform 300ms ease 0ms;
+  transform-origin: 50% 50% 0px;
+}
+
+.shopcar .shopinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 24rpx;
+  border-bottom: 2rpx solid #eee;
+  padding-bottom: 10rpx;
+}
+
+.shopcar .shopinfo .infobox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopcar .shopinfo .infobox .imabox {
+  width: 158rpx;
+  height: 158rpx;
+  position: relative;
+}
+
+.shopcar .shopinfo .infobox .imabox image {
+  width: 158rpx;
+  height: 158rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #fff;
+  position: absolute;
+  top: -20rpx;
+}
+
+.shopcar .shopinfo .infobox .info {
+  margin-left: 20rpx;
+}
+
+.shopcar .shopinfo .infobox .info .name {
+  width: 400rpx;
+  color: #333;
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shopcar .shopinfo .infobox .info .price {
+  color: #ff3b30;
+  font-size: 36rpx;
+  margin-top: 20rpx;
+}
+
+.x {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 26rpx;
+  margin-right: 6rpx;
+}
+
+.x image {
+  width: 100%;
+  height: 100%;
+}
+
+.shopNum {
+  margin: 30rpx 24rpx 0 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopNum .numbox {
+  font-size: 30rpx;
+  border-right-color: #333;
+}
+
+.shopNum .numbox text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.numControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numControl >view {
+  width: 80rpx;
+  height: 58rpx;
+  border-top: 2rpx solid #eaeaea;
+  border-bottom: 2rpx solid #eaeaea;
+  font-size: 28rpx;
+  color: #c4c4c4;
+  text-align: center;
+  line-height: 58rpx;
+}
+
+.numControl .btn {
+  border-left: 2rpx solid #eaeaea;
+  border-right: 2rpx solid #eaeaea;
+}
+
+.addShopCar {
+  width: 690rpx;
+  height: 88rpx;
+  margin: 0 auto;
+  margin-top: 46rpx;
+  background: #e2ecff;
+  font-size: 36rpx;
+  color: #4c87ff;
+  text-align: center;
+  line-height: 88rpx;
+  margin-bottom: 20rpx;
+}

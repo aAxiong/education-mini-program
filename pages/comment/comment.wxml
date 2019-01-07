@@ -1,0 +1,52 @@
+<view class='top'>
+  <textarea wx:if="{{carShow === false}}" class='textarea flex' placeholder="请输入评论内容" placeholder-class='_pla' bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{remark}}' data-val="remark" confirm-type="done"></textarea>
+  <view class='textarea flex' wx:else>
+    <block wx:if="{{remark === ''}}">
+      <text style='color: #999;font-size:30rpx'>请输入评论内容</text>
+    </block>
+    <block>
+      {{remark}}
+    </block>
+  </view>
+  <view class='clearfix'>
+    <view class='imgList fl' wx:for="{{showList}}">
+      <image src='{{item.src}}' class='photo_icon' wx:if="{{item.type === 'image'}}" />
+      <video wx:else src='{{item.src}}'></video>
+      <view class='delete_icon_wrapper' bindtap='delelteFn' data-ind="{{index}}">
+        <image src='/images/delete_icon.png' class='delete_icon' bindtap='delelteFn' />
+      </view>
+    </view>
+    <view class='imgList border fl' bindtap='showAddModal' wx:if="{{showList.length < 3}}">
+      <image src='/images/photo_icon.png' class='addicon' />
+      <text>
+    照片/视频
+    </text>
+    </view>
+  </view>
+</view>
+
+<view class='fixed'>
+  <view class="mask {{carShow==true?'visible':''}}" bindtap='closeShopCar'></view>
+  <view class="shopWindow" style="transform:translate(0, 0);" animation="{{animationData}}">
+    <view class='ul'>
+      <view class='li pink' bindtap='addVideo'>
+        录视频
+      </view>
+      <view class='li' bindtap='addPhoto' data-tp="camera">
+        拍照片
+      </view>
+      <view class='li noborder' bindtap='addPhoto' data-tp="album">
+        我的相册
+      </view>
+      <view class='line'></view>
+      <view class='li noborder' bindtap='closeShopCar'>
+        取消
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='btn' bindtap='save'>提交</view>
+<showToast id="kmShowToast"></showToast>
+<!-- <loading updateMsgFlag="{{!isCoverFlag}}" wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"></loading> -->
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"></loading>

@@ -1,0 +1,104 @@
+<view class="flex nav">
+  <view class='flex_item all {{active === "all" ? "active" : ""}}' bindtap='ChangeTab' data-tab='all'>
+    <text>全部</text>
+  </view>
+  <view class='flex_item  {{active === "pay" ? "active" : ""}}' bindtap='ChangeTab' data-tab='pay'>
+    <text>未支付</text>
+  </view>
+  <view class='flex_item  {{active === "send" ? "active" : ""}}' bindtap='ChangeTab' data-tab='send'>
+    <text>待发货</text>
+  </view>
+  <view class='flex_item  {{active === "recv" ? "active" : ""}}' bindtap='ChangeTab' data-tab='recv'>
+    <text>待收货</text>
+  </view>
+  <view class='flex_item  {{active === "finish" ? "active" : ""}}' bindtap='ChangeTab' data-tab='finish'>
+    <text>已收货</text>
+  </view>
+</view>
+
+<!-- <view class='order-title overHidenText flex_item'>
+           
+          </view> -->
+<!-- <view class='order-status'>
+            <block wx:if="{{item.status === 'pay'}}">待支付</block>
+            <block wx:if="{{item.status === 'send'}}">待发货</block>
+            <block wx:if="{{item.status === 'recv'}}">待收货</block>
+            <block wx:if="{{item.status === 'finish'}}">已收货</block>
+          </view> -->
+<view class='order-wrapper'>
+  <view class='list' bindtap='gotoDetails' data-orderid="{{order.orderid}}" wx:for="{{orderList}}" wx:key="{{order.orderid}}" wx:for-item="order" wx:for-index="idx">
+    <view class='list-status flex'>
+      <view class='flex_item'>
+        共{{order.goods.length}}件商品 合计{{order.allPirce}}元
+      </view>
+      <view class='order-status'>
+        <block wx:if="{{order.status === 'pay'}}">待支付</block>
+        <block wx:if="{{order.status === 'send'}}">待发货</block>
+        <block wx:if="{{order.status === 'recv'}}">待收货</block>
+        <block wx:if="{{order.status === 'finish'}}">已收货</block>
+      </view>
+    </view>
+    <block wx:for="{{order.goods}}" wx:key="{{item.id}}">
+      <view class='clearfix'>
+        <view class='list-top flex {{index === 0 ? "list-top1" : ""}}'>
+          <view class='pic'>
+            <image src="{{item.pic}}" lazy-load />
+          </view>
+          <view class='flex_item'>
+            <view class='order-top overHidenText'>
+              {{item.title}}
+            </view>
+            <view class='order-middle clearfix'>
+              <view class='info'>共{{item.allitem}}课</view>
+              <view class='pri clearfix'>
+                <view class='fl'>¥{{item.price}}</view>
+                <view class='fr' style='color: #666'>x{{item.number}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{order.status === 'finish'}}" class='active fr sendBtn' catchtap='gocomment' data-goodsid="{{item.id}}">{{item.orderid}}评论</view>
+      </view>
+    </block>
+    <view class='list-bottom clearfix'>
+      <block wx:if="{{order.status === 'pay'}}">
+        <block wx:if="{{!order.isoverdue}}">
+          <view class='fr active' catchtap='saveOrder' data-orderid="{{order.orderid}}">
+            支付{{order.payforTime}}
+          </view>
+        </block>
+        <block wx:else>
+          <view class='fr' data-orderid="{{order.orderid}}">
+            订单已过期
+          </view>
+        </block>
+      </block>
+      <block wx:if="{{order.status === 'recv'}}">
+        <view class='fr active' catchtap='resureGet' data-orderid="{{order.orderid}}">
+          确认收货
+        </view>
+        <view class='fr active' catchtap='lookLogistics' data-orderid="{{order.orderid}}">
+          查看物流
+        </view>
+      </block>
+      <!-- <block wx:if="{{order.status === 'finish'}}">
+        <view class='fr active' catchtap='gocomment' data-orderid="{{order.orderid}}">
+          评论
+        </view>
+      </block> -->
+      <block wx:if="{{order.status === 'send'}}">
+        <view class='fr' data-orderid="{{order.orderid}}">
+          等待商家发货
+        </view>
+      </block>
+      <!-- <view class='fr' wx:if="{{order.status === 'pay'}}" catchtap='deleteUserHandler' data-orderid="{{order.orderid}}">
+        取消订单
+      </view> -->
+    </view>
+  </view>
+</view>
+
+<noState wx:if="{{orderList.length === 0}}"></noState>
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"></loading>
+<showToast id="kmShowToast"></showToast>
+<comfirm id="kmcomfirm" title="是否取消该订单" bind:surelFn="surelFn" bind:cancelFn="cancelFn"></comfirm>

@@ -1,0 +1,67 @@
+page {
+  background: #fff;
+}
+
+.list {
+  margin-left: 42rpx;
+  border-bottom: 1px solid #eee;
+  padding-top: 43rpx;
+  padding-right: 48rpx;
+  padding-bottom: 26rpx;
+}
+
+.list .list-top {
+  line-height: 44rpx;
+}
+
+.list .list-top .flex_item {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.list .list-top image {
+  width: 40rpx;
+  height: 37rpx;
+  margin-top: 4rpx;
+}
+
+.list .list-top .tel {
+  font-size: 30rpx;
+  color: #999;
+  min-width: 206rpx;
+}
+
+.list .list-content {
+  margin-top: 16rpx;
+  font-size: 34rpx;
+  color: #333;
+}
+
+.fixedBtn  image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 20rpx;
+  vertical-align: top;
+  margin-right: 20rpx;
+}
+
+.status0 {
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 100rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  width: 90rpx;
+  text-align: center;
+  margin-right: 50rpx;
+  margin-top: 6rpx;
+  margin-left: 20rpx;
+}
+
+.status0.active {
+  background: #4c87ff;
+}
+
+.w120 {
+  width: 320rpx;
+}

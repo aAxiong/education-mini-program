@@ -1,0 +1,15 @@
+<!-- 弹窗 -->
+<view wx:if="{{isShow}}" class='get_user_info_box flex_box'>
+  <view class='get_user_info'>
+    <view class='get_user_info_top'>微信授权</view>
+    <view class='get_user_info_center flex_box'>
+      <image class='get_user_info_logo' src='../../images/logo.png'></image>
+      <view class='get_user_info_centent'>教育申请获得以下权限：</view>
+      <view class='get_user_info_msg'>获得你的公开信息（昵称、头像等）</view>
+    </view>
+    <view class='get_user_info_btn_box flex_box'>
+      <!-- <button class='get_user_info_btn' bind:touchstart='closeBox'>取消</button> -->
+      <button class='get_user_info_btn' open-type="getUserInfo" bindgetuserinfo='getUserInfo'>确定</button>
+    </view>
+  </view>
+</view>

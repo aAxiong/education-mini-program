@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "loading": "/project.config.jsoncomponents/loading/loading",
+    "showToast": "/project.config.jsoncomponents/showToast/showToast",
+    "comfirm": "/project.config.jsoncomponents/comfirm/comfirm"
+  }
+}

@@ -1,0 +1,4 @@
+<!--components/showToastComponents/showToastComponents.wxml-->
+<view wx:if="{{showToastFLag}}" class='show_toast_box'>
+	<view class='show_toast_content'>{{showToastMsg}}</view>
+</view>

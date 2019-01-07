@@ -1,0 +1,35 @@
+@import "../../wxParse/wxParse.wxss";
+
+page {
+  background: #fff;
+  padding-bottom: 100rpx
+}
+
+.tit {
+  font-size: 48rpx;
+  color: #333;
+  padding: 20rpx 44rpx;
+}
+
+.infoTime {
+  padding: 4rpx 44rpx 40rpx;
+}
+
+.infoTime .name {
+  font-size: 28rpx;
+  color: #4c87ff;
+}
+
+.infoTime .time {
+  font-size: 28rpx;
+  color: #9b9b9b;
+}
+
+.infoTime .split {
+  color: #999;
+  margin: 0 0.2em;
+}
+
+.pa8 {
+  padding: 0 44rpx;
+}

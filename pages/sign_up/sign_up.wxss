@@ -1,0 +1,191 @@
+page {
+  background: #fff;
+  padding-bottom: 40rpx;
+}
+
+.sign_up_top {
+  width: 100%;
+  height: 450rpx;
+  position: relative;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.sign_up_form .title {
+  font-size: 48rpx;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.sign_up_top .sign_up_top_middle {
+  margin: 0 auto;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 38rpx;
+}
+
+.sign_up_top .logo {
+  width: 183rpx;
+  height: 77rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sign_up_top .text {
+  font-size: 24rpx;
+  color: #fff;
+  width: 658rpx;
+  margin: 20rpx auto 0;
+}
+
+.sign_up_middle {
+  width: 670rpx;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 3rpx 20rpx 0 rgba(0, 0, 0, 0.10);
+  border-radius: 10rpx;
+  min-height: 433rpx;
+  position: relative;
+  margin-top: -144rpx;
+  padding: 32rpx 30rpx;
+}
+
+.sign_up_middle .item {
+  margin-top: 35rpx;
+}
+
+.sign_up_middle .item:first-child {
+  margin-top: 0;
+}
+
+.sign_up_middle .icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 14rpx;
+}
+
+.sign_up_middle .name {
+  font-size: 34rpx;
+  color: #4c87ff;
+  margin-top: 8rpx;
+}
+
+.sign_up_middle .name_info {
+  font-size: 24rpx;
+  color: #ff8e9a;
+}
+
+.sign_up_form {
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 48rpx;
+  color: #4a4a4a;
+}
+
+.changeSex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.changeSex .btn {
+  width: 287rpx;
+  margin-top: 40rpx;
+  height: 120rpx;
+  background: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #9c9c9c;
+  font-size: 34rpx;
+}
+
+.changeSex .btn image {
+  width: 100rpx;
+  height: 104rpx;
+  margin-top: 16rpx;
+}
+
+.changeSex .btn.boybtn {
+  border-top-left-radius: 100rpx;
+  border-bottom-left-radius: 100rpx;
+}
+
+.changeSex .btn.boybtn image {
+  margin-left: 50rpx;
+}
+
+.changeSex .btn.girlbtn image {
+  margin-right: 50rpx;
+}
+
+.changeSex .btn.boybtn text {
+  margin-right: 30rpx;
+}
+
+.changeSex .btn.girlbtn text {
+  margin-left: 30rpx;
+}
+
+.changeSex .btn.girlbtn {
+  border-top-right-radius: 100rpx;
+  border-bottom-right-radius: 100rpx;
+}
+
+.changeSex .btn.boybtn.active {
+  background: #4c87ff;
+  color: #fff;
+}
+
+.changeSex .btn.girlbtn.active {
+  background: #ff8e9a;
+  color: #fff;
+}
+
+.inputbox {
+  margin: 0 auto;
+  margin-top: 80rpx;
+}
+
+.inputbox .inputli {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 100px;
+  width: 686rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-bottom: 60rpx;
+}
+
+.inputbox .inputli image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 46rpx;
+}
+
+.inputbox .inputli input, .inputbox .inputli .input {
+  width: 408rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+  font-size: 34rpx;
+  text-align: left;
+  line-height: 100rpx;
+  color: #666;
+}
+
+.fixedbtn {
+  background: #e2ecff;
+  width: 690rpx;
+  height: 88rpx;
+  margin: 78rpx auto 0;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 36rpx;
+  color: #4c87ff;
+  border-radius: 3px;
+}

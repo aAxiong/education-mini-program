@@ -1,0 +1,78 @@
+page {
+  background: #4c84e6;
+}
+
+.bg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bg image {
+  width: 100%;
+  height: 567rpx;
+}
+
+.centerbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -65%);
+  z-index: 3;
+}
+
+.whitebox {
+  width: 622rpx;
+  height: 415rpx;
+  background: #fff;
+  border-radius: 30rpx;
+}
+
+.whitebox.active {
+  height: 463rpx;
+}
+
+.whitebox  .imagebox {
+  margin: 0 auto;
+  padding-top: 50rpx;
+  text-align: center;
+}
+
+.whitebox  .imagebox  image {
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.whitebox .texttit {
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 48rpx;
+  color: #4c84e6;
+}
+
+.whitebox .int {
+  font-size: 28rpx;
+  color: #fea63f;
+  text-align: center;
+  margin-top: 15rpx;
+}
+
+.textcontent {
+  font-size: 64rpx;
+  color: #4c84e6;
+  text-align: center;
+  margin-top: 15rpx;
+}
+
+.championbox {
+  width: 382rpx;
+  height: 158rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.championbox image {
+  width: 382rpx;
+  height: 158rpx;
+}

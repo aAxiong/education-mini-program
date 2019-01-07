@@ -1,0 +1,98 @@
+<!-- <loading updateMsgFlag="{{!isCoverFlag}}" wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"> -->
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}">
+
+</loading>
+<!-- 确定框 -->
+<comfirm></comfirm>
+<showToast id="kmShowToast"></showToast>
+<!-- 轮播图 -->
+<view class='slider'>
+  <swiper class='slider-content' indicator-dots="true" autoplay="true" circular="true" indicator-active-color="#6598ff" indicator-color="#FFFFFF">
+    <swiper-item wx:for="{{indexList[0].sliderList}}" wx:key="{{index}}">
+      <image lazy-load class='slider-img' mode="aspectFill" src='{{item.imgUrl}}'></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="artbox">
+  <view class="tab-list">
+    <view class="li {{tabActive==2?'active':''}}" data-index="2" bindtap='swtichTab'>每日推荐</view>
+    <view class="li {{tabActive==0?'active':''}}" data-index="0" bindtap='swtichTab'>家庭作业</view>
+    <view class="li {{tabActive==1?'active':''}}" data-index="1" bindtap='swtichTab'>在线答题</view>
+  </view>
+  <view class="pagebox everyday" wx:if='{{tabActive==2}}'>
+    <view class="art-content">
+      <view class="colum {{(index+1)%5==0?'active':''}}" wx:for='{{remocoList}}' data-type="{{item.type}}" data-id='{{item.id}}' bindtap='jumpClassPage'>
+        <!-- {{item.type==1?'active':''}} -->
+        <view class="imgbox">
+          <image src='{{item.imgUrl}}' lazy-load></image>
+          <view class="label">视频</view>
+        </view>
+        <view class="tit ">
+          {{item.title}}
+        </view>
+        <!-- <view class="int ">{{item.intfomation}}</view> -->
+      </view>
+    </view>
+  </view>
+  <view class="pagebox home" wx:if='{{tabActive==0}}'>
+    <view class="nav">
+      <view class="navbox">
+        <view class="pickerDate">
+          <view class="picker">
+            <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+              <image src='/images/pickerDate.png'></image>
+              <view class="picker">
+                {{date}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <view class="changebtnGroup">
+          <view class="btn {{finshStatus==0?'active':''}}" bindtap='changeWork' data-index='0'>未完成</view>
+          <view class="btn {{finshStatus==1?'active':''}}" bindtap='changeWork' data-index='1'>完成</view>
+        </view>
+      </view>
+    </view>
+    <view class="taskbox">
+      <view class="li" wx:for='{{homeTaskList}}'>
+        <view class="imabox">
+          <image src='{{item.imgUrl}}' lazy-load></image>
+        </view>
+        <view class="taskname">
+          <view class="tit">{{item.title}}</view>
+          <view class="num">完成:{{item.finshen}}/{{item.total}}</view>
+          <view class="fraction">总积分:{{item.totalFraction}}</view>
+        </view>
+        <view class="btnGrooup">
+          <view class="btn" wx:if='{{finshStatus==1}}'>已完成</view>
+          <view class="btn active" wx:if='{{finshStatus==0}}' bindtap='homeWorkAnswer' data-id='{{item.id}}' data-type='0' data-title='{{item.title}}'>答题</view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <view class="pagebox online" wx:if='{{tabActive==1}}'>
+    <view class="taskbox">
+      <view class="li" wx:for='{{onlineSubjectList}}'>
+        <view class="imabox">
+          <image src='{{item.imgUrl}}' lazy-load></image>
+        </view>
+        <view class="taskname">
+          <view class="tit">{{item.title}}</view>
+          <view class="num">完成:{{item.finshen}}/{{item.total}}</view>
+          <view class="fraction">总积分:{{item.totalFraction}}</view>
+        </view>
+        <block >
+          <view wx:if="{{item.finshen !== item.total}}" class="btnGrooup" bindtap='homeWorkAnswer' data-title='{{item.title}}' data-id='{{item.id}}' data-type='1'>
+            <view class="btn active">答题</view>
+          </view>
+        </block>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<user-auto></user-auto>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发表评论",
+  "usingComponents": {
+    "loading": "/project.config.jsoncomponents/loading/loading",
+    "showToast": "/project.config.jsoncomponents/showToast/showToast"
+  }
+}

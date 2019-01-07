@@ -1,0 +1,25 @@
+<view class='list' wx:for="{{addressList}}" bindtap='chooseAddress' data-ind="{{index}}">
+  <view class='list-top flex'>
+    <view class='w120 overHidenText'>
+      <text>{{item.name}}</text>
+      <text class='small'>({{item.sex === 0 ? '女士':'先生'}})</text>
+    </view>
+    <view class='tel'>{{item.mobile}}</view>
+    <view class='status0 {{item.num === 1 ? "active" : ""}}' >
+    {{item.num === 1 ? '默认' : ''}}
+    </view>
+    <image src='/images/update_icon.png' bindtap='updateHandle' data-ind="{{index}}" />
+  </view>
+  <view class='list-content'>
+    <view>{{item.area}}</view>
+    <view>{{item.address}}</view>
+  </view>
+</view>
+
+
+
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"></loading>
+<view class='kong'></view>
+<navigator open-type='navigate' url='/pages/edit-address/edit-address' class='fixedBtn'>
+  <image src='/images/add_address_icon.png' />新增地址
+</navigator>

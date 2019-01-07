@@ -1,0 +1,12 @@
+<view class='get_user_info_box flex_box' wx:if="{{showFlag}}">
+  <view class='get_user_info'>
+    <view class='get_user_info_top'>系统提示</view>
+    <view class='get_user_info_center flex_box'>
+      <view class='get_user_info_centent'>{{title}}</view>
+    </view>
+    <view class='get_user_info_btn_box flex'>
+      <view class='flex_item' catchtap='cancalHandler'>{{cancalText}}</view>
+      <view class='flex_item' catchtap='sureHandler'>{{sureText}}</view>
+    </view>
+  </view>
+</view>

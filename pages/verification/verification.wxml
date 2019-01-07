@@ -1,0 +1,31 @@
+<view class="title">
+  当前身份验证</view>
+<view class="changeSex">
+  <view class="btn boybtn {{sex==0?'active':''}}" data-index='0' bindtap='changeSex'>
+    <image src='/images/boyicon.png'></image>
+    <text>男生</text>
+  </view>
+  <view class="btn girlbtn {{sex==1?'active':''}}" data-index='1' bindtap='changeSex'>
+    <text>女生</text>
+    <image src='/images/girlicon.png'></image>
+  </view>
+</view>
+<view class="inputbox">
+  <view class="inputli">
+    <image src="/images/student.png"></image>
+    <input type='text' placeholder='输入学生姓名' bindinput="getname" placeholder-class="phcolor"></input>
+  </view>
+  <view class="inputli">
+    <image src="/images/phone.png"></image>
+    <input type="number" placeholder='输入家长电话' bindinput="getPhone" placeholder-class="phcolor"></input>
+  </view>
+  <view class="inputli">
+    <image src="/images/class.png"></image>
+    <input type='text' placeholder='输入班级' bindinput="getclasss" placeholder-class="phcolor"></input>
+  </view>
+</view>
+
+<view class="btnbox">
+  <view class="btn" wx:if='{{tphone==""||name==""||classs==""}}'>下一步</view>
+  <view class="btn active" bindtap='subInfo' wx:else>下一步</view>
+</view>

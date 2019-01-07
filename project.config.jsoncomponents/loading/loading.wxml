@@ -1,0 +1,16 @@
+<!--components/loadingComponents/loadingComponents.wxml-->
+<!-- 加载的时候，loading动画 -->
+<view class='loading_box {{updateMsgFlag?"act":" "}} {{isCoverFlag?"cover":" "}}'>
+	<view class='loading_box_limit'>
+		<view class='loading_center'>
+			<view class="loading">
+				<view class='dot'></view>
+				<view class='dot'></view>
+				<view class='dot'></view>
+				<view class='dot'></view>
+				<view class='dot'></view>    
+			</view>
+		</view>
+		<view>{{loadngMsg}}</view>
+	</view>
+</view>

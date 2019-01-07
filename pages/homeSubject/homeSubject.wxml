@@ -1,0 +1,135 @@
+<view class="box">
+  <view class="titlebox" wx:if='{{types==0}}'>
+    <view class="imagbox">
+      <image src='{{optionList[0].headerImg}}'></image>
+    </view>
+    <view class="progressbox">
+      <view class="progress" style="width:{{(optionList[0].nowQuestion/optionList[0].Total)*100}}%;"></view>
+    </view>
+    <view class="num">
+      {{optionList[0].nowQuestion}}/{{optionList[0].Total}}
+    </view>
+  </view>
+  <view class="titlebox" wx:else>
+    <view class="imagbox">
+      <image src='{{optionList[0].headerImg}}'></image>
+    </view>
+    <!-- <view class="change" bindtap='changeQue'>
+      <image src='/images/change.png'></image>
+      换一批
+    </view> -->
+  </view>
+  <view class="questionBox">
+    <view class="question">
+      {{optionList[0].number}}.{{optionList[0].question}}
+      <text wx:if='{{types==1}}'>(积分：{{optionList[0].score}})</text>
+    </view>
+    <view class="imgbox" wx:if='{{optionList[0].imagurl!=""}}'>
+      <image src='{{optionList[0].imagurl}}'></image>
+    </view>
+  </view>
+  <view class="optionbox">
+    <view class="li" wx:for='{{optionList[0].list}}' data-index='{{index}}' bindtap='choseOpt' data-item="{{item}}" wx:key="{{index}}">
+      <view class="textbox">
+        <view class="optionZ">{{item.opt}}:</view>
+        <view class="optionText">{{item.content}}</view>
+      </view>
+      <block wx:if="{{!IsShowFailModal}}">
+        <image src='/images/gou.png' class="right" hidden='{{optionNum !== index}}'></image>
+      </block>
+      <block wx:else>
+
+        <image src='/images/gou.png' class="right" wx:if='{{optionList[0].PointAnswerIndex === index}}'></image>
+        <image src='/images/fail_icon.png' class="fail" wx:if="{{optionList[0].PointAnswerIndex !== index && optionNum === index}}"></image>
+
+      </block>
+      <image src='/images/queoption.png' class="option"></image>
+    </view>
+  </view>
+  <!-- <view class='askAnswer' bindtap='showAnswerInfoHandle'>
+    <text>提示答案</text>
+  </view> -->
+  <view class="btngropt">
+    <view class="btn" wx:if='{{optionList[0].nowQuestion>1}}' style='margin-right:50rpx;' bindtap='Lastquestion'>
+      <view class="text">上一题</view>
+      <image src='/images/quebtn.png'></image>
+    </view>
+    <block wx:if="{{!IsShowFailModal}}"> 
+      <!-- <view class="btn" bindtap='subAnswer'>
+        <view class="text">下一题</view>
+        <image src='/images/quebtn.png'></image>
+      </view> -->
+    </block>
+    <block wx:else>
+      <view class="btn" bindtap='nextOptionList'>
+        <view class="text">下一题</view>
+        <image src='/images/quebtn.png'></image>
+      </view>
+    </block>
+  </view>
+  <view class="bg">
+    <image src='/images/subjectbg.png'></image>
+  </view>
+
+
+</view>
+<view class='clearfix answerPoint' style='margin-top: 30rpx;' hidden='{{!optionList[0].showAnswerInfo}}'>
+  <view class='fl'>答案：</view>
+  <view class='fl'>
+    {{optionList[0].PointAnswer}}
+  </view>
+</view>
+<view class='clearfix answerPoint' hidden='{{!optionList[0].showAnswerInfo}}'>
+  <view class='fl'>解读：</view>
+  <view class='fl' style='width: 580rpx'>
+    {{optionList[0].PointAnswerText}}
+  </view>
+</view>
+<view class="comment-info">
+  <view class="commit-nav">
+    <view class="pl">评论</view>
+    <view class="xpl" bindtap='jumpComment'>写评论</view>
+  </view>
+  <view class="commentBox">
+    <view class="li" wx:for='{{commentList}}'>
+      <view class="imgbox">
+        <image src='{{item.avatar}}'></image>
+      </view>
+      <view class="info">
+        <view class="firstRow">
+          <view class="name">{{item.nickName}}</view>
+          <!-- <view class="goods">{{item.likeNum}}
+            <image src='/images/whitegood.svg' wx:if='{{item.isLike==0}}' data-id='{{item.id}}' data-like='1' bindtap='likeOpt'></image>
+            <image src='/images/whiteyesgood.svg' data-id='{{item.id}}' data-like='0' bindtap='likeOpt' wx:else></image>
+          </view> -->
+        </view>
+        <view class="comment">{{item.content}}
+        </view>
+        <view class="me">
+          <image src='{{imgItem}}' wx:for='{{item.imgurl}}' wx:for-item='imgItem' mode="aspectFill" data-url="{{imgItem}}" bindtap='prevImgsTap' data-id='{{index}}'></image>
+          <video src="{{videoItem}}" wx:for='{{item.videoUrl}}' wx:for-item='videoItem' bindplay='videoTap' data-src='{{videoItem}}' id='v{{item.id}}{{index}}' direction='0' bindfullscreenchange='bindfullscreenchanges'></video>
+        </view>
+        <!-- <view class="dl">
+          <view class="dd" wx:for='{{item.recoveryList}}' wx:for-item='citem'>
+            <view class="ddName">{{citem.name}}</view>
+            <view class="ddComment">{{citem.content}}</view>
+          </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='video-playing' hidden='{{isShowPlaying}}'>
+  <view class="xx" bindtap='videoStopTap'>
+    <image src='/images/xx.png'></image>
+  </view>
+  <view class='video-wrapper' catchtap="stopVideoWrapper">
+    <video class='video' id='storeVideo' binderror="errorHander" bindwaiting="wating" src='{{videoSrc}}'></video>
+  </view>
+</view>
+
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}" isCoverFlag='{{isCoverFlag}}'></loading>
+<showToast id="kmShowToast"></showToast>

@@ -1,0 +1,23 @@
+<view class="centerbox">
+  <view class="championbox">
+    <image src='/images/champion.png'></image>
+  </view>
+  <view class="whitebox {{types==1?'active':''}}">
+    <view class="imagebox">
+      <image src='{{imgurl}}'></image>
+    </view>
+    <view class="int" wx:if='{{types==1}}'>
+      （积分：{{totalScore}}）
+    </view>
+    <view class="texttit">
+      {{workStatus}}</view>
+    <view class="textcontent">
+      答对: {{num}}题
+    </view>
+  </view>
+</view>
+
+
+<view class="bg">
+  <image src='/images/subjectbg.png'></image>
+</view>

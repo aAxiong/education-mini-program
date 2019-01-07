@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "艾克斯科学实验室",
+  "usingComponents": {
+    "footer-nav": "/project.config.jsoncomponents/footer-nav/footer-nav",
+    "user-auto": "/project.config.jsoncomponents/user-auto/user-auto",
+    "loading": "/project.config.jsoncomponents/loading/loading",
+    "comfirm": "/project.config.jsoncomponents/comfirm/comfirm",
+    "showToast": "/project.config.jsoncomponents/showToast/showToast"
+  }
+}

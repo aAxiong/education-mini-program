@@ -1,0 +1,269 @@
+/**index.wxss**/
+
+page {
+  background: #fff;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.slider .slider-content {
+  width: 91.3%;
+  height: 260rpx;
+  margin: 0 auto;
+}
+
+.slider .slider-img {
+  width: 100%;
+  height: 260rpx;
+  border-radius: 8rpx;
+}
+
+.artbox {
+  margin-top: 50rpx;
+}
+
+.artbox .tab-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.artbox .tab-list .li {
+  color: #000;
+  font-size: 32rpx;
+  opacity: 0.58;
+  padding-bottom: 5rpx;
+  letter-spacing: 2rpx;
+}
+
+.artbox .tab-list .li.active {
+  border-bottom: 7rpx solid #4c87ff;
+  color: #4c87ff;
+  font-size: 36rpx;
+  opacity: 1;
+  font-weight: bold;
+}
+
+.artbox .tab-list .li:nth-child(2) {
+  margin: 0 45rpx;
+}
+
+.art-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50rpx;
+  flex-wrap: wrap;
+  /* padding-bottom: 150rpx; */
+  padding: 0 4.3% 100rpx;
+}
+
+.colum {
+  width: 335rpx;
+  /* flex: 0 0 335rpx; */
+  margin-bottom: 30rpx;
+}
+
+.colum .imgbox {
+  width: 100%;
+  height: 190rpx;
+  position: relative;
+  border-radius: 4px;
+}
+
+.colum .imgbox .label {
+  position: absolute;
+  bottom: 15rpx;
+  right: 15rpx;
+  font-size: 22rpx;
+  color: #fff;
+  width: 66rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  background: #999;
+  display: none;
+}
+
+.colum .imgbox.active .label {
+  display: block;
+}
+
+.colum .tit {
+  text-align: left;
+  font-size: 30rpx;
+  color: #333;
+  margin-top: 15rpx;
+}
+
+.curriculum {
+  margin-bottom: 150rpx;
+}
+
+.colum.active {
+  width: 100%;
+  /* flex: 1; */
+}
+
+.colum.active .imgbox {
+  height: 260rpx;
+}
+
+.colum.active .imgbox image {
+  height: 260rpx;
+}
+
+.colum .imgbox image {
+  width: 100%;
+  height: 190rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+
+.colum .int {
+  color: #999;
+  font-size: 26rpx;
+  margin-top: 5rpx;
+  display: none;
+}
+
+.colum.active .int {
+  display: block;
+}
+
+/*家庭作业*/
+
+.home {
+  width: 100%;
+}
+
+.home .nav {
+  padding: 20rpx 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.navbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.8%;
+}
+
+.home .nav .pickerDate {
+}
+
+.home .nav .pickerDate image {
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 14rpx;
+  vertical-align: sub;
+}
+
+.home .nav .pickerDate .picker {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #9b9b9b;
+}
+
+.home .nav .changebtnGroup {
+  display: flex;
+}
+
+.home .nav .changebtnGroup .btn {
+  font-size: 28rpx;
+  color: #9b9b9b;
+  margin-left: 40rpx;
+}
+
+.home .nav .changebtnGroup .btn.active {
+  font-size: 28rpx;
+  color: #4c87ff;
+}
+
+.taskbox {
+  margin-top: 40rpx;
+  padding: 0 4.8%;
+}
+
+.taskbox .li {
+  display: flex;
+  margin-bottom: 40rpx;
+}
+
+.taskbox .li .imabox {
+  margin-right: 32rpx;
+}
+
+.taskbox .li .imabox image {
+  width: 132rpx;
+  height: 132rpx;
+}
+
+.taskbox .li .taskname {
+  margin-top: 10rpx;
+}
+
+.taskbox .li .taskname .tit {
+  font-size: 34rpx;
+  color: #333;
+  text-align: left;
+}
+
+.taskbox .li .taskname .num {
+  font-size: 24rpx;
+  color: #999;
+  letter-spacing: 0.09rpx;
+  text-align: left;
+  line-height: 38rpx;
+  margin-top: 5rpx;
+}
+
+.taskbox .li .taskname .fraction {
+  font-size: 24rpx;
+  color: #999;
+  letter-spacing: 0.09rpx;
+  text-align: left;
+  line-height: 38rpx;
+}
+
+.taskbox .li .btnGrooup {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.taskbox .li .btnGrooup .btn.active {
+  border: 1rpx solid #4c87ff;
+  border-radius: 3px;
+}
+
+.taskbox .li .btnGrooup .btn {
+  width: 153rpx;
+  height: 55rpx;
+  color: #4c87ff;
+  font-size: 30rpx;
+  line-height: 55rpx;
+  text-align: center;
+}

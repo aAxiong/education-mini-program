@@ -1,0 +1,10 @@
+<view>
+  <view class='image'>
+    <image src='/images/meter/meter_no_state.png' />
+  </view>
+
+  <view class='title'>{{title}}</view>
+
+  <view class='text'>{{text}}</view>
+  <slot></slot>
+</view>

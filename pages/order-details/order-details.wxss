@@ -1,0 +1,188 @@
+page {
+  background: #fff;
+  padding-bottom: 95rpx;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.orderTop {
+  height: 130rpx;
+  position: relative;
+  width: 100%;
+}
+
+.orderTop .text {
+  font-size: 34rpx;
+  color: #fff;
+  width: 100%;
+  height: 130rpx;
+  position: absolute;
+  line-height: 130rpx;
+  left: 0px;
+  top: 0;
+  padding-left: 40rpx;
+}
+
+.orderTop .time {
+  padding-left: 180rpx
+}
+.address {
+  padding: 35rpx 40rpx 32rpx;
+}
+
+.address .icon {
+  width: 28rpx;
+  height: 34rpx;
+  margin-right: 32rpx;
+  vertical-align: middle;
+}
+
+.address .address_top {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.address .address_area {
+  font-size: 34rpx;
+  color: #333;
+  line-height: 50rpx;
+}
+
+.line-bg {
+  background: #f5f5f5;
+  width: 100%;
+  height: 16rpx;
+}
+
+.content {
+  padding: 30rpx 40rpx 0;
+}
+
+.content-list {
+  border-bottom: 1px solid #eee;
+}
+
+.content-list .title {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 30rpx;
+}
+
+.content-list .list {
+  margin-bottom: 40rpx;
+}
+
+.content-list .list .pic {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+
+.content-list .list .list-title {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.content-list .list .list-info {
+  font-size: 22rpx;
+  margin-top: 10rpx;
+  color: #9b9b9b;
+}
+
+.content-list .list .list-bottom {
+  margin-top: 14rpx;
+}
+
+.content-list .list .list-pri {
+  font-size: 28rpx;
+  color: #f00;
+}
+
+.content-list .list .list-count {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.content .extraInfo {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 34rpx;
+}
+
+.content .extraInfo .smallTop {
+  margin-top: 34rpx;
+  font-size: 28rpx;
+  color: #333;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content .extraInfo .smallTop2 {
+  margin-top: 28rpx;
+}
+
+.content .extraInfo .smallTop3 {
+  margin-top: 28rpx;
+}
+
+.content .extraInfo .smallTop3 text {
+  font-size: 36rpx;
+  color: #4c87ff;
+}
+
+.telPhone {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.telPhone image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: top;
+  margin-top: 30rpx;
+  margin-rigth: 8rpx
+}
+
+.footer_content {
+  padding: 20rpx 40rpx 30rpx;
+  font-size: 24rpx;
+  color: #7f7f7f;
+}
+
+.fixBtn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 95rpx;
+  line-height: 95rpx;
+  border-top: 1px solid #eee;
+  background: #fff;
+  padding: 0 40rpx;
+}
+
+.fixBtn .fr {
+  width: 160rpx;
+  height: 50rpx;
+  border: 2rpx solid #9b9b9b;
+  border-radius: 3px;
+  font-size: 26rpx;
+  color: #9b9b9b;
+  text-align: center;
+  line-height: 50rpx;
+  margin-right: 30rpx;
+  margin-top: 16rpx;
+}
+
+.fixBtn .active {
+  border: 2rpx solid #4c87ff;
+  color: #4c87ff;
+}
+
+.fixBtn view:first-child {
+  margin-right: 0px;
+}

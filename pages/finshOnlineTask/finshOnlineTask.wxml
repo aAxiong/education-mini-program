@@ -1,0 +1,23 @@
+<view class="centerbox">
+  <view class="championbox">
+    <image src='/images/champion.png'></image>
+  </view>
+  <view class="whitebox">
+    <view class="imagebox">
+      <image src='{{optList[0].imgurl}}'></image>
+    </view>
+    <view class="int">
+      （积分：{{optList[0].int}}）
+    </view>
+    <view class="texttit">
+      {{optList[0].workStatus}}</view>
+    <view class="textcontent">
+      答对: {{optList[0].num}}题
+    </view>
+  </view>
+</view>
+
+
+<view class="bg">
+  <image src='/images/subjectbg.png'></image>
+</view>

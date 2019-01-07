@@ -1,0 +1,49 @@
+/* project.config.jsoncomponents/footerNav.wxss */
+
+view {
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_item {
+  flex: 1;
+}
+
+.footer_nav {
+  position: fixed;
+  bottom: 0px;
+  height: 100rpx;
+  padding: 10rpx 0;
+  background: #fff;
+  width: 100%;
+  border-top: 1px solid #dcdcdc;
+  text-align: center;
+}
+
+.footer_nav .allAutoWidth {
+  width: 81rpx;
+  height: 51rpx;
+  margin: 0 auto;
+}
+
+.footer_nav .allAutoWidth image {
+  width: 51rpx;
+  height: 51rpx;
+}
+
+.footer_nav .title {
+  font-size: 20rpx;
+  color: #7f8389;
+}
+
+.footer_nav .active {
+  color: #75c1fe;
+}
+
+.house {
+  width: 50rpx;
+  height: 50rpx;
+}

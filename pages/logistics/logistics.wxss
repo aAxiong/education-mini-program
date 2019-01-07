@@ -1,0 +1,117 @@
+page {
+  background: #fff;
+}
+
+.top {
+  padding: 20rpx 40rpx 0 40rpx;
+}
+
+.top .pic {
+  width: 120rpx;
+  height: 120rpx;
+  background: #e8e8e8;
+  margin-right: 20rpx;
+  position: relative;
+}
+
+.top .pic image {
+  width: 100%;
+  height: 100%;
+}
+
+.top .pic .bottomText {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.69);
+  width: 100%;
+  left: 0px;
+  font-size: 14rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.top .flex_item_top {
+  font-size: 28rpx;
+  text-align: left;
+  line-height: 40rpx;
+}
+
+.top .flex_item_top text.status {
+  font-size: 28rpx;
+  color: #5c99f4;
+  line-height: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.top .name, .top .num {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+.wrapper {
+  margin-top: 36rpx;
+  border-top: 1px solid #eee;
+  padding-top: 40rpx;
+}
+
+.wrapper .right-line {
+  border-left: 1px dashed #d8d8d8;
+  padding-left: 54rpx;
+  margin-left: -54rpx;
+  padding-bottom: 40rpx;
+  min-height: 140rpx;
+}
+
+.wrapper .time {
+  width: 120rpx;
+  text-align: right;
+  margin-right: 10rpx;
+  min-height: 10rpx;
+}
+
+.wrapper .time .time-date {
+  font-size: 30rpx;
+  color: #666;
+}
+
+.wrapper .time .time-times {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.wrapper .icon {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+  position: relative;
+  z-index: 10;
+}
+
+.wrapper .icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .icon .cir {
+  width: 20rpx;
+  height: 20rpx;
+  background: #d8d8d8;
+  border-radius: 50%;
+  margin: 10rpx auto 0;
+}
+
+.wrapper .status {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.wrapper .title {
+  font-size: 26rpx;
+  color: #999;
+  width: 480rpx;
+  margin-top: 6rpx;
+}

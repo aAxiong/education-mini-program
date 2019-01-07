@@ -1,0 +1,308 @@
+/* pages/homeSubject/homeSubject.wxss */
+
+page {
+  background: #4c84e6;
+}
+
+.box {
+  position: relative;
+}
+
+.titlebox {
+  padding: 0 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+}
+
+.titlebox .imagbox image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.change {
+  font-size: 26rpx;
+  color: #fff;
+}
+
+.change image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+  vertical-align: sub;
+}
+
+.progressbox {
+  width: 460rpx;
+  height: 30rpx;
+  border-radius: 100rpx;
+  border: 4px solid #3969bc;
+  position: relative;
+  z-index: 3;
+}
+
+.progress {
+  width: 30%;
+  height: 100%;
+  border: 2rpx solid #4c84e6;
+  background: #fea63f;
+  border-radius: 100rpx;
+}
+
+.num {
+  font-size: 28rpx;
+  color: #fea63f;
+  letter-spacing: 0.45px;
+}
+
+.questionBox {
+  padding: 0 50rpx;
+  max-height: 350rpx;
+  margin-top: 30rpx;
+  position: relative;
+  z-index: 3;
+}
+
+.questionBox .question {
+  font-size: 36rpx;
+  color: #fff;
+  letter-spacing: 0.58px;
+  text-align: left;
+}
+
+.questionBox .question text {
+  font-size: 28rpx;
+  color: #fea63f;
+}
+
+.questionBox .imgbox {
+  width: 386rpx;
+  height: 198rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+
+.questionBox .imgbox image {
+  width: 386rpx;
+  height: 198rpx;
+}
+
+.optionbox {
+  padding: 0 50rpx;
+  margin-top: 20rpx;
+  position: relative;
+  z-index: 3;
+}
+
+.optionbox .li {
+  width: 650rpx;
+  height: 124rpx;
+  position: relative;
+  margin-bottom: 50rpx;
+}
+
+.optionbox .li image.option {
+  width: 650rpx;
+  height: 124rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.optionbox .li image.right {
+  width: 44rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 40rpx;
+  right: 80rpx;
+  z-index: 3;
+}
+
+.optionbox .li image.fail {
+  width: 38rpx;
+  height: 38rpx;
+  position: absolute;
+  top: 34rpx;
+  right: 80rpx;
+  z-index: 3;
+}
+
+.optionbox .li .textbox {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+
+.optionbox .li .textbox .optionZ {
+  width: 89rpx;
+  font-size: 52rpx;
+  color: #fff;
+  margin-left: 20rpx;
+  line-height: 110rpx;
+}
+
+.optionbox .li .textbox .optionText {
+  font-size: 30rpx;
+  color: #333;
+  letter-spacing: 0.48px;
+}
+
+.bg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bg image {
+  width: 100%;
+  height: 567rpx;
+}
+
+.btngropt {
+  padding: 0 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.btngropt .btn {
+  width: 302rpx;
+  height: 126rpx;
+  position: relative;
+}
+
+.btngropt .btn image {
+  width: 302rpx;
+  height: 126rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.btngropt .btn .text {
+  position: relative;
+  z-index: 3;
+  font-size: 36rpx;
+  color: #333;
+  letter-spacing: 0.58px;
+  line-height: 110rpx;
+  text-align: center;
+}
+
+.comment-info {
+  width: 100%;
+  padding: 0 5%;
+  margin-top: 80rpx;
+}
+
+.comment-info .commentBox .li {
+  display: flex;
+  margin-bottom: 60rpx;
+  justify-content: space-between;
+}
+
+.comment-info .commentBox .li .imgbox image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.comment-info .commentBox .li .info {
+  width: 576rpx;
+}
+
+.comment-info .commentBox .li .info .firstRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-info .commentBox .li .info .firstRow .name {
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.comment-info .commentBox .li .info .firstRow .goods image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: sub;
+}
+
+.comment-info .commentBox .li .info .firstRow .goods {
+  font-size: 26rpx;
+  color: #fff;
+}
+
+.comment-info .commentBox .li .info .comment {
+  font-size: 36rpx;
+  color: #fff;
+}
+
+.comment-info .commentBox .li .info .me {
+  display: flex;
+  margin-top: 15rpx;
+}
+
+.comment-info .commentBox .li .info .me image {
+  width: 164rpx;
+  height: 164rpx;
+  margin-left: 10rpx;
+}
+
+.comment-info .commentBox .li .info .me video {
+  width: 164rpx;
+  height: 164rpx;
+  margin-left: 10rpx;
+}
+
+.comment-info .commentBox .li .info .dl .dd {
+  margin-top: 20rpx;
+}
+
+.comment-info .commentBox .li .info .dl .ddName {
+  font-size: 32rpx;
+  color: #fff;
+  border-left: 5rpx solid #fff;
+  padding-left: 10rpx;
+}
+
+.comment-info .commentBox .li .info .dl .ddComment {
+  font-size: 36rpx;
+  color: #fff;
+  margin-top: 2rpx;
+}
+
+.commit-nav {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 36rpx;
+  margin-bottom: 50rpx;
+}
+
+.askAnswer {
+  font-size: 30rpx;
+  color: #fff;
+  text-align: right;
+  margin-right: 60rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+  z-index: 10;
+}
+
+.askAnswer text {
+  border-bottom: 1px solid #fff;
+}
+
+.answerPoint {
+  position: relative;
+  z-index: 10;
+  padding: 0 32rpx;
+  font-size: 36rpx;
+  color: #fff;
+}

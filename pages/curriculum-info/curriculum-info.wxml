@@ -1,0 +1,141 @@
+<view class="videobox">
+  <video src="{{infoList.goodsDetail.vedioUrl}}" controls></video>
+</view>
+<view class="infobox">
+  <view class="tit">{{infoList.name}}</view>
+  <view class="cc">{{infoList.introduction}}
+  </view>
+  <view class="info">
+    {{infoList.updateInfo}}丨预计更新{{infoList.classHour}}课时 已更新{{infoList.currentNum}}课时
+    <!-- {{infoList.gmtModified}} -->
+  </view>
+  <view class="money">
+    ¥{{infoList.price}}
+  </view>
+</view>
+<view class="deail_box">
+  <view class="tab">
+    <view class="li {{tabActive==0?'active':''}}" data-index="0" bindtap='swtichTab'>详情</view>
+    <view class="li {{tabActive==1?'active':''}}" data-index="1" bindtap='swtichTab'>评论</view>
+  </view>
+  <view class="totaLbox">
+    <view class="deailbox-info" wx:if='{{tabActive==0}}'>
+      <view class="introduceBox">
+        <view class="tit">{{infoList.goodsDetail.name}}</view>
+        <view class="art-content">{{infoList.goodsDetail.introduction}}
+        </view>
+      </view>
+      <view class="c-info">
+        <view class="toolbar">
+          <view class="order" wx:if='{{orderStatus==0}}' data-id='1' bindtap='orderChange'>
+            <text>倒序</text>
+            <view class="icon">
+              <view class="d1" style='margin-bottom: 4rpx;'></view>
+              <view class="d2"></view>
+            </view>
+          </view>
+          <view class="order" data-id='0' bindtap='orderChange' wx:else>
+            <text>正序</text>
+            <view class="icon">
+              <view class="d2" style='margin-bottom: 4rpx;'></view>
+              <view class="d1"></view>
+            </view>
+          </view>
+          <!-- <view class="cache">
+          <text>缓存音频到本地</text>
+          <image src='/images/down.svg'></image>
+        </view> -->
+        </view>
+        <view class="couresList">
+          <view class="li" wx:for='{{infoList.goodsDetailList}}' wx:key='{{index}}'>
+            <!-- <view class="imgbox">
+              <view class="freeicon" wx:if='{{item.type==1}}'>免费</view>
+              <image src='/images/suo.png' wx:if='{{item.type==2}}'></image>
+            </view> -->
+            <view class="textbox" data-id='{{item.id}}' bindtap='loadNewList'>
+              <view class="tit">第{{item.sort}}课 {{item.name}}</view>
+              <view class="time">{{item.addTime}}更新</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="comment-info" wx:if='{{tabActive==1}}'>
+      <view class="noComment" wx:if="{{commentList.length === 0}}" style='display:none;'>
+        暂无评论
+      </view>
+      <view class="commentBox" wx:else>
+        <view class="li" wx:for='{{commentList}}'>
+          <view class="imgbox">
+            <image src='{{item.avatar}}'></image>
+          </view>
+          <view class="info">
+            <view class="firstRow">
+              <view class="name">{{item.nickName}}</view>
+              <!-- <view class="goods">{{item.likeNum}}
+                <image src='/images/good.svg' wx:if='{{item.isLike==0}}' data-id='{{item.id}}' data-like='1' bindtap='likeOpt'></image>
+                <image src='/images/yesgood.svg' data-id='{{item.id}}' data-like='0' bindtap='likeOpt' wx:else></image>
+              </view> -->
+            </view>
+            <view class="comment">{{item.content}}
+            </view>
+            <view class="me">
+              <video src="{{videoItem}}" wx:for='{{item.videoUrl}}' wx:for-item='videoItem' bindplay='videoTap' data-src='{{videoItem}}' id='v{{item.id}}{{index}}' direction='0' bindfullscreenchange='bindfullscreenchanges'></video>
+              <image src='{{imgItem}}' wx:for='{{item.imgurl}}' wx:for-item='imgItem' mode="aspectFill" data-url="{{imgItem}}" bindtap='prevImgsTap' data-id='{{index}}'></image>
+            </view>
+            <!-- <view class="dl">
+              <view class="dd" wx:for='{{item.recoveryList}}' wx:for-item='citem'>
+                <view class="ddName">{{citem.name}}</view>
+                <view class="ddComment">{{citem.content}}</view>
+              </view>
+            </view> -->
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btnbox" hidden="{{infoList.isFree === 0}}">
+      <view class="freebtn" bindtap='openShopCar' data-index='0'>加入购物车</view>
+
+      <view class="buy" bindtap='openShopCar' data-index='1'>立即购买</view>
+    </view>
+
+  </view>
+</view>
+<view class="shopcar">
+  <view class="mask {{carShow==true?'visible':''}}" bindtap='closeShopCar'></view>
+  <view class="shopWindow" style="transform:translate(0, 0);" animation="{{animationData}}">
+    <view class="shopinfo">
+      <view class="infobox1">
+        <view class="imabox">
+          <image src='{{infoList.picUrl}}'></image>
+        </view>
+        <view class="info">
+          <view class="name">{{infoList.name}}</view>
+          <view class="price">¥{{infoList.price}}</view>
+        </view>
+      </view>
+      <view class="x" bindtap='closeShopCar'>
+        <image src='/images/close.png'></image>
+      </view>
+    </view>
+    <view class="shopNum">
+      <view class="numbox">购买数量：
+        <text>{{num}}件</text>
+      </view>
+      <view class="numControl">
+        <view class=" btn reduce" data-id='{{infoList.id}}' bindtap='reduceNum'>-</view>
+        <view class="num">{{num}}</view>
+        <view class=" btn add" data-id='{{infoList.id}}' bindtap='addNum'>+</view>
+      </view>
+    </view>
+    <view class="addShopCar" wx:if='{{shopCarType==0}}' data-id='{{infoList.id}}' bindtap='jumpShopCart' data-item="{{infoList}}">
+      加入购物车
+    </view>
+    <view class="addShopCar" style='background:#4c87ff;color:#fff;' wx:if='{{shopCarType==1}}' bindtap='quickBuy'>
+      立即购买
+    </view>
+  </view>
+</view>
+<!-- <loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}" isCoverFlag='{{isCoverFlag}}'></loading> -->
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"></loading>
+<showToast id="kmShowToast"></showToast>

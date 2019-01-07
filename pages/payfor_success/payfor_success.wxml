@@ -1,0 +1,7 @@
+<view class="img">
+  <image src='/images/payfor_success.png'></image>
+</view>
+<view class='title'>支付成功</view>
+<view class='info'>实付款¥{{money}}元</view>
+
+<navigator class='btn' delta='99' open-type='navigateBack'>完成</navigator>

@@ -1,0 +1,44 @@
+<view class="tool">
+  <view class="imgbox" bindtap='allChose'>
+    <image wx:if='{{TotalSelection==false}}' src='/images/nochose.png'></image>
+    <image wx:else src='/images/chose.png '></image>
+    <text>全选</text>
+  </view>
+  <view class="textbox">
+    共两件商品
+  </view>
+</view>
+<view class="list">
+  <view class="li" wx:for='{{classList[0].list}}' bindtap='uniceChose' data-id='{{item.id}}'>
+    <view class="chosebox">
+      <image wx:if='{{item.check==false}}' src='/images/nochose.png'></image>
+      <image wx:else src='/images/chose.png '></image>
+    </view>
+    <view class="imgbox">
+      <image src='{{item.imgUrl}}'></image>
+    </view>
+    <view class="infobox">
+      <view class="tit">{{item.tit}}</view>
+      <view class="classTime">共{{item.allitem}}课</view>
+      <view class="toolbar">
+        <view class="price">¥{{item.price * item.num}}</view>
+        <view class="numControl">
+          <view class=" btn reduce" data-id='{{item.id}}' catchtap='reduceNum'>-</view>
+          <view class="num">{{item.num}}</view>
+          <view class=" btn add" data-id='{{item.id}}' catchtap='addNum'>+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="buybar">
+  <view class="totalPrice">
+    <text class="total">合计：</text>
+    <text class="price">{{payDesc}}元</text>
+  </view>
+  <view class='buybtn' bindtap='goBuy'>
+    立即购买</view>
+</view>
+
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}" isCoverFlag='{{isCoverFlag}}'></loading>
+<showToast id="kmShowToast"></showToast>

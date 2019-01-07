@@ -1,0 +1,164 @@
+/* pages/shopCar-list/shopCar-list.wxss */
+
+page {
+  background: #fff;
+}
+
+.tool {
+  margin: 0 20rpx;
+  margin-top: 48rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tool .imgbox {
+  margin-left: 16rpx;
+  font-size: 22rpx;
+}
+
+.tool .imgbox text {
+  vertical-align: middle;
+}
+
+.tool .imgbox image {
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.tool .textbox {
+  font-size: 22rpx;
+  margin-left: 16rpx;
+}
+
+.list {
+  margin: 18rpx 20rpx 154rpx 20rpx;
+}
+
+.list .li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px 0 #dadada;
+  margin-bottom: 20rpx;
+  padding: 24rpx 0;
+}
+
+.list .li .chosebox {
+  margin: 0 16rpx;
+}
+
+.list .li .chosebox image {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.list .li  .imgbox {
+  margin-right: 20rpx;
+}
+
+.list .li  .imgbox image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.list .li .infobox {
+  width: 420rpx;
+  height: 180rpx;
+  margin-right: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.list .li .infobox .tit {
+  font-size: 28rpx;
+  color: #333;
+  max-height: 97rpx;
+  width: 100%;
+}
+
+.list .li .infobox .classTime {
+  font-size: 22rpx;
+  color: #9b9b9b;
+  margin-top: 10rpx;
+  width: 100%;
+}
+
+.list .li .infobox .toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.list .li .infobox .toolbar .price {
+  font-size: 28rpx;
+  color: #f00;
+}
+
+.numControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numControl >view {
+  width: 80rpx;
+  height: 58rpx;
+  border-top: 2rpx solid #eaeaea;
+  border-bottom: 2rpx solid #eaeaea;
+  font-size: 28rpx;
+  color: #c4c4c4;
+  text-align: center;
+  line-height: 58rpx;
+}
+
+.numControl .btn {
+  border-left: 2rpx solid #eaeaea;
+  border-right: 2rpx solid #eaeaea;
+}
+
+.buybar {
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee;
+  padding: 14rpx 0;
+  background: #fff;
+}
+
+.buybar .totalPrice {
+  vertical-align: middle;
+}
+
+.buybar .totalPrice text.total {
+  font-size: 24rpx;
+  color: #333;
+  vertical-align: middle;
+}
+
+.buybar .totalPrice text.price {
+  font-size: 36rpx;
+  color: #4c87ff;
+  vertical-align: middle;
+}
+
+.buybtn {
+  width: 335rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background: #4c87ff;
+  color: #fff;
+  font-size: 36rpx;
+  border-radius: 3rpx;
+}

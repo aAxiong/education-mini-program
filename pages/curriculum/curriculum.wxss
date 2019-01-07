@@ -1,0 +1,171 @@
+/* pages/curriculum/curriculum.wxss */
+
+page {
+  background: #fff;
+}
+
+.cc {
+  padding: 0 4.3%;
+}
+
+.cc .c-content {
+  width: 100%;
+}
+
+.cc .top .tit {
+  margin-top: 30rpx;
+}
+
+.cc .top .flex {
+  margin-top: 26rpx;
+}
+
+.cc .tit {
+  font-size: 36rpx;
+  color: #333;
+}
+
+.cc .shopCart {
+  position: relative;
+}
+
+.cc .top .cartNum {
+  background: #ff3b30;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 32rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  display: block;
+  position: absolute;
+  right: -8rpx;
+  top: -6rpx;
+}
+
+.cc .top button {
+  width: 74rpx;
+  height: 68rpx;
+  background: #fff;
+  position: relative;
+  margin-left: 30rpx;
+  padding: 0;
+}
+
+.cc .top button::after {
+  border: none;
+}
+
+.cc .top image {
+  width: 62rpx;
+  height: 62rpx;
+}
+
+.cc .c-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 25rpx;
+}
+
+.cc .c-content .li {
+  width: 332rpx;
+  height: 317rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+
+.cc .c-content .li image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8rpx;
+}
+
+.cc .c-content .li .textbox {
+  position: absolute;
+  left: 30rpx;
+  bottom: 18rpx;
+}
+
+.cc .c-content .li .textbox .tit {
+  color: #fff;
+  font-size: 34rpx;
+  width: 280rpx;
+  height: 44rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cc .c-content .li .textbox .int {
+  color: #fff;
+  font-size: 26rpx;
+  width: 280rpx;
+  height: 44rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fc {
+  padding: 0 4.3%;
+  margin-bottom: 150rpx;
+  margin-top: 30rpx;
+}
+
+.fc .tit {
+  font-size: 36rpx;
+  color: #333;
+  margin-bottom: 25rpx;
+}
+
+.fc .f-content .li {
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  margin-bottom: 50rpx;
+}
+
+.fc .f-content .li .imgbox {
+  width: 132rpx;
+  height: 132rpx;
+  position: relative;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+  /* vertical-align: top; */
+}
+
+.fc .f-content .li .imgbox image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fc .f-content .li .textbox .p-tit {
+  font-size: 34rpx;
+  color: #333;
+}
+
+.fc .f-content .li .textbox .p-cc {
+  font-size: 28rpx;
+  color: #999;
+  margin: 8rpx 0;
+  width: 500rpx;
+}
+
+.fc .f-content .li .textbox .p-label {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.loading_box.cover {
+  background-color: #fff;
+  opacity: 0.9;
+}

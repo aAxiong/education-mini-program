@@ -1,0 +1,88 @@
+<view class="flex banner">
+  <image src='/images/c-bg.png'></image>
+  <view class="bannerbox flex">
+    <view class="companyInfo">
+      <view class="logo">
+        <image src='/images/c-logo.png'></image>
+      </view>
+      <view class="info">
+        <view>艾克思商场</view>
+        <view class="renzheng">
+          <image src='/images/renzheng.png'></image>
+          <text>认证企业</text>
+        </view>
+      </view>
+    </view>
+    <view class='flex top'>
+      <view class='shopCart'>
+        <block wx:if="{{SHOPCARLISTOBJ.length > 0}}">
+          <text class='cartNum'>{{SHOPCARLISTOBJ.length}}</text>
+          <image src='/images/shop_cart_active_icon.png' bindtap='jumpShopCartaa'></image>
+        </block>
+        <block wx:else>
+          <image src='/images/shop_cart_icon.png'></image>
+        </block>
+      </view>
+      <view class='share'>
+        <button open-type="share" hover-class="btn-hover" hover-class='btn_hover'>
+        </button>
+        <image src='/images/share_active_icon.png'></image>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+<view class="list">
+  <view class="li" wx:for='{{currList[0].list}}'>
+    <view class="imagebox" data-id='{{item.id}}' bindtap='jumpClassInfo'>
+      <image src='{{item.imgUrl}}'></image>
+    </view>
+    <view class="text">
+      {{item.tit}}
+    </view>
+    <view class="toolbar">
+      <text>¥{{item.price}}</text>
+      <view class="buy" data-id='{{item.id}}' data-index='{{index}}' bindtap='openShopCar'>
+        <image src='/images/shop_cart_active_icon.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="shopcar">
+  <view class="mask {{carShow==true?'visible':''}}" bindtap='closeShopCar'></view>
+  <view class="shopWindow" style="transform:translate(0, 0);" animation="{{animationData}}">
+    <view class="shopinfo">
+      <view class="infobox">
+        <view class="imabox">
+          <image src='{{currList[0].list[shopId].imgUrl}}'></image>
+        </view>
+        <view class="info">
+          <view class="name">{{currList[0].list[shopId].tit}}</view>
+          <view class="price">¥{{currList[0].list[shopId].price}}</view>
+        </view>
+      </view>
+      <view class="x" bindtap='closeShopCar'>
+        <image src='/images/close.png'></image>
+      </view>
+    </view>
+    <view class="shopNum">
+      <view class="numbox">购买数量：
+        <text>{{num}}件</text>
+      </view>
+      <view class="numControl">
+        <view class=" btn reduce" data-id='{{currList[0].list[shopId].id}}' bindtap='reduceNum'>-</view>
+        <view class="num">{{num}}</view>
+        <view class=" btn add" data-id='{{currList[0].list[shopId].id}}' bindtap='addNum'>+</view>
+      </view>
+    </view>
+    <view class="addShopCar" data-id='{{currList[0].list[shopId].id}}' bindtap='jumpShopCart' data-item="{{currList[0].list[shopId]}}">
+      加入购物车
+    </view>
+
+  </view>
+</view>
+
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}" isCoverFlag='{{isCoverFlag}}'></loading>
+<showToast id="kmShowToast"></showToast>

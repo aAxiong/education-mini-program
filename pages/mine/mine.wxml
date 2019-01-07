@@ -1,0 +1,94 @@
+<view class='flex usertop'>
+  <view class='flex_item flex'>
+    <view class='head'>
+      <image src="{{userInfo.avatarUrl || '/images/head_img.png'}}"></image>
+    </view>
+    <view class='name overHidenText' bindtap='userAutoHander'>
+      {{userInfo.nickName || '请登录'}}
+    </view>
+    <view class='score'>
+      (积分：{{score}})
+    </view>
+  </view>
+  <view class='rightBtn'></view>
+</view>
+
+<view class='order'>
+  <view class='top flex'>
+    <view class='title flex_item'>我的订单</view>
+    <view class='goorder' bindtap='navigatorHandle' data-tp="all" data-page="order">查看全部购买记录</view>
+    <image src='/images/right_icon.png'></image>
+  </view>
+  <view class='middle flex'>
+    <view class='list flex_item' bindtap='navigatorHandle' data-tp="pay" data-page="order">
+      <view class='image'>
+        <image class='pay_icon' src='/images/pay_icon.png'></image>
+      </view>
+      <view>未支付</view>
+    </view>
+    <view class='list flex_item' bindtap='navigatorHandle' data-tp="send" data-page="order">
+      <view class='image'>
+        <image class='send_icon' src='/images/send_icon.png'></image>
+      </view>
+      <view>未发货</view>
+    </view>
+    <view class='list flex_item' bindtap='navigatorHandle' data-tp="recv" data-page="order">
+      <view class='image'>
+        <image class='recv_icon' src='/images/recv_icon.png'></image>
+      </view>
+      <view>待收货</view>
+    </view>
+    <view class='list flex_item' bindtap='navigatorHandle' data-tp="finish" data-page="order">
+      <view class='image'>
+        <image class='finish_icon' src='/images/finish_icon.png'></image>
+      </view>
+      <view>已收货</view>
+    </view>
+  </view>
+</view>
+
+<view class='nav-list'>
+  <navigator class='flex list' url='/pages/sign_up/sign_up' open-type='navigate'>
+    <image src='/images/apply_icon.png' class='icon'></image>
+    <view class='flex_item flex right-wrapper'>
+      <view class='title flex_item'>在线报名</view>
+      <image src='/images/right_icon.png'></image>
+    </view>
+  </navigator>
+
+  <view class='flex list' bindtap='navigatorHandle' data-page="address">
+    <image src='/images/address_icon.png' class='icon'></image>
+    <view class='flex_item flex right-wrapper'>
+      <view class='title flex_item'>我的地址</view>
+      <image src='/images/right_icon.png'></image>
+    </view>
+  </view>
+
+  <view class='flex list'>
+    <image src='/images/web_icon.png' class='icon'></image>
+    <view class='flex_item flex right-wrapper'>
+      <view class='title flex_item'>官方网站</view>
+      <image src='/images/right_icon.png'></image>
+    </view>
+  </view>
+
+  <navigator class='flex list' url='/pages/project_join/project_join' open-type='navigate'>
+    <image src='/images/join_icon.png' class='icon'></image>
+    <view class='flex_item flex right-wrapper'>
+      <view class='title flex_item'>项目加盟</view>
+      <image src='/images/right_icon.png'></image>
+    </view>
+  </navigator>
+  <!-- <view class='flex list'>
+    <image src='/images/brand_icon.png' class='icon'></image>
+    <view class='flex_item flex right-wrapper'>
+      <view class='title flex_item'>品牌介绍</view>
+      <image src='/images/right_icon.png'></image>
+    </view>
+  </view> -->
+</view>
+
+
+<user-auto id="userAuto" bindmyevent="AutoLogin"></user-auto>
+<!-- <loading updateMsgFlag="{{!isCoverFlag}}" wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"></loading> -->
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"></loading>

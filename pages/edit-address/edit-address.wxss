@@ -1,0 +1,132 @@
+page {
+  background: #fff;
+}
+
+.wrapper {
+  margin-left: 40rpx;
+}
+
+.wrapper .title {
+  /* width: 140rpx; */
+  font-size: 34rpx;
+  color: #333;
+  margin-right: 40rpx;
+}
+
+.wrapper .recvName {
+  font-size: 34rpx;
+  color: #333;
+  margin-right: 16rpx;
+}
+
+.wrapper .top {
+  line-height: 100rpx;
+}
+
+.wrapper .top .flex_item {
+  padding-left: 58rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.wrapper .input {
+  font-size: 34rpx;
+  height: 100rpx;
+  min-height: 100rpx;
+  text-align: left;
+  color: #333;
+}
+
+.wrapper .list {
+  line-height: 100rpx;
+  /* height: 100rpx; */
+  border-bottom: 1px solid #eee;
+}
+
+.wrapper .list.area image {
+  width: 17rpx;
+  height: 32rpx;
+  margin-top: 38rpx;
+  margin-right: 26rpx;
+}
+
+.wrapper .sexlist {
+  padding-left: 180rpx;
+  font-size: 34rpx;
+  color: #333;
+}
+
+.wrapper .marginLeft {
+  margin-left: 80rpx;
+}
+
+.wrapper .sexlist image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 20rpx;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 33rpx;
+}
+
+.textarea {
+  font-size: 34rpx;
+  text-align: left;
+  color: #000;
+  width: 100%;
+  height: 200rpx;
+  line-height: 34rpx;
+  margin-top: 30rpx;
+}
+
+.btn {
+  width: 685rpx;
+  margin: 60rpx auto 0;
+}
+
+.btn view {
+  width: 335rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #e2ecff;
+  border-radius: 3px;
+  font-size: 36rpx;
+  color: #4c87ff;
+  text-align: center;
+}
+
+.btn .save {
+  background: #4c87ff;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.progress {
+  position: relative;
+  width: 116rpx;
+  height: 50rpx;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 50rpx;
+  float: right;
+  margin-top: 20rpx;
+  margin-right: 50rpx;
+}
+
+.progress_active {
+  border: #4c87ff 1px solid;
+}
+
+.progress_btn {
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 30rpx;
+  background: rgb(194, 194, 194);
+  top: 8rpx;
+  left: 10rpx;
+  transition: all 0.3s;
+}
+
+.progress_btn_active {
+  background: #4c87ff;
+  left: 70rpx;
+}

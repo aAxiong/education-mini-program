@@ -1,0 +1,53 @@
+<view class="cc">
+  <view class="flex top" style='font-weight: bold'>
+    <view class='tit flex_item'>特色教程</view>
+    <view class='flex'>
+      <view class='shopCart'>
+        <block wx:if="{{cartNum > 0}}">
+          <text class='cartNum'>{{cartNum}}</text>
+          <image src='/images/shop_cart_active_icon.png' bindtap='jumpShopCart'></image>
+        </block>
+        <block wx:else>
+          <image src='/images/shop_cart_icon.png'></image>
+        </block>
+      </view>
+      <view class='share'>
+        <button open-type="share">
+          <image src='/images/share_active_icon.png'></image>
+        </button>
+
+      </view>
+    </view>
+  </view>
+  <view class="c-content">
+    <view class="li" wx:for='{{curriculumList[0].characteristicList}}' bindtap='jumpTeInfo' data-id='{{item.id}}' wx:key='{{index}}'>
+      <image lazy-load="true" src='https://xcx.mblsoft.com/img/CommodityImg/3494031854107887799/ProdPhoto20181203092026397.jpg'></image>
+      <view class="textbox">
+        <view class="tit">{{item.title}}</view>
+        <view class="int">{{item.intfomation}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="fc">
+  <view class="tit" style='font-weight: bold'>
+    免费课程
+  </view>
+  <view class="f-content">
+    <view class="li" wx:for='{{freeList[0].courseList}}' bindtap='jumpCourseInfo' data-id='{{item.id}}' wx:key='{{index}}'>
+      <view class="imgbox">
+        <image lazy-load src='{{item.imgUrl}}'></image>
+      </view>
+      <view class="textbox flex_item">
+        <view class="p-tit">{{item.title}}</view>
+        <view class="p-cc">{{item.intfomation}}</view>
+        <view class="p-label">
+          {{item.name}}
+          <text>/</text> {{item.position}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<loading wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}" isCoverFlag='{{isCoverFlag}}'></loading>
+<showToast id="kmShowToast"></showToast>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "footer-nav": "/project.config.jsoncomponents/footer-nav/footer-nav",
+    "user-auto": "/project.config.jsoncomponents/user-auto/user-auto",
+    "loading": "/project.config.jsoncomponents/loading/loading"
+  }
+}

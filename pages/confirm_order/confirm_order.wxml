@@ -1,0 +1,71 @@
+<view class="order_top flex" bindtap='chooseAddress'>
+  <image class='icon' src='/images/address_icon3.png'></image>
+  <view class='flex_item'>
+    <view class='content-top' wx:if="{{addressInfo.name}}">
+      <view class='clearfix'>
+        <view class='fl overHidenText' style='width: 350rpx;'>收货人：{{addressInfo.name}}</view>
+        <view class='fr'>{{addressInfo.mobile}}</view>
+      </view>
+      <view class='address_desc'>
+        {{addressInfo.area}}{{addressInfo.address}}
+      </view>
+    </view>
+    <view class='content-top content-top2' wx:else>
+      暂无收货地址，立即添加
+    </view>
+  </view>
+  <image class='right_icon' src='/images/right_icon.png' />
+</view>
+
+<view class='line-bg'></view>
+<view class='content'>
+
+  <view class='content-list'>
+    <view class='title'>艾克斯商场</view>
+    <view class='list flex' wx:for="{{goodsList}}">
+      <view class='pic'>
+        <image src='{{item.imgUrl}}'></image>
+      </view>
+      <view class='flex_item'>
+        <view class='list-title overHidenText'>
+      <view class="tit">{{item.tit}}</view>
+         {{item.title}}
+        </view>
+        <view class='list-info'>
+          共{{item.allitem}}课
+        </view>
+        <view class='list-bottom clearfix'>
+          <view class='list-pri fl'>
+            ¥{{item.price}}
+          </view>
+          <view class='list-count fr'>
+            x{{item.num}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='list-info-small flex'>
+    <view class='title'>运费</view>
+    <view class='info'>免运费</view>
+  </view>
+
+  <view class='list-remank flex'>
+    <view class='title'>留言</view>
+    <input type='text' class='flex_item' placeholder='给卖家留言' placeholder-class="phcolor" bindinput="ChangeInputHander" bindconfirm="ChangeInputHander" value='{{remak}}' data-val="remak" confirm-type="done" />
+  </view>
+</view>
+
+<view class='fixBtn flex'>
+  <view class='text'>应付总额：
+    <text>{{allPirce}}元</text>
+  </view>
+  <view class='btn' bindtap='saveOrder'>立即付款</view>
+</view>
+
+<showToast id="kmShowToast"></showToast>
+<!-- <loading updateMsgFlag="{{!isCoverFlag}}" wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}"></loading> -->
+<loading  wx:if="{{isCoverFlag}}" loadngMsg="{{loadngMsg}}">
+
+</loading>
